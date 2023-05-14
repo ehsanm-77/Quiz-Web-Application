@@ -8,7 +8,7 @@ import {
   Button,
   IconButton,
 } from '@mui/material';
-import { Brightness4, Brightness7 } from '@mui/icons-material';
+import { Brightness4, Brightness7, Brightness6 } from '@mui/icons-material';
 import { Container } from './layout/Container/Container';
 
 function App() {
@@ -50,13 +50,15 @@ function App() {
             height: '100%',
           }}
         >
-          <Typography>
+          <Typography className="w-full h-full flex justify-center items-center">
             <Container currentTheme={currentTheme} />
           </Typography>
+        </Box>
+        <div className="absolute top-0">
           <IconButton onClick={handleThemeChange} color="primary">
             {currentTheme === 'dark' ? <Brightness7 /> : <Brightness4 />}
           </IconButton>
-        </Box>
+        </div>
       </ThemeProvider>
     </>
   );
