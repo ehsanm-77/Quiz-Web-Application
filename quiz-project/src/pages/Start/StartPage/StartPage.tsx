@@ -1,19 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useFormContext } from '../../../utils/FormContext/FormContext';
 
 const StartPage = () => {
   const { formState, formDispatch } = useFormContext();
+  const [animate, setAnimate] = useState(false);
 
   const handleStart = () => {
-    // Perform form validation if needed
-    // Update the form state to move to the next page
     formDispatch({ type: 'CHANGE_PAGE', payload: { page: 1 } });
   };
-
+  const handleAnimation = () => {
+    setAnimate(true);
+  };
   return (
-    <div>
+    <div className="flex flex-col items-center justify-between h-full mb-16 mt-28">
+      <div className="text-2xl font-bold gradient-bg">Wellcome To Quiz App</div>
       {/* Render your form inputs here */}
-      <button onClick={handleStart}>Start</button>
+      <button
+        onClick={() => {
+          setTimeout(handleStart, 2000);
+          handleAnimation();
+        }}
+        className="flex flex-col items-center gap-5"
+      >
+        <div className="font-bold text-xl">GET START</div>
+        <img
+          src="./src/assets/img/getstart.svg"
+          alt=""
+          className={`w-16 ${animate ? 'animate-image' : ''}`}
+        />
+      </button>
     </div>
   );
 };

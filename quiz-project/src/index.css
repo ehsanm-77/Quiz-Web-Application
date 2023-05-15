@@ -11,3 +11,51 @@ body {
   width: 100%;
   height: 100%;
 }
+.gradient-bg {
+  background: linear-gradient(to right, #86e546, #9b3df9, #ffdf6b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30vh) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0) rotate(180deg);
+  }
+}
+
+.animate-image {
+  animation: moveUp 2s ease forwards;
+}
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-answer-item {
+  animation: slideInLeft 1s ease forwards;
+}
+@keyframes scale {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.animate-question-item {
+  animation: scale 1s ease forwards;
+}

@@ -36,6 +36,7 @@ const MainSection = () => {
           question={quizData[formState.currentQuestionIndex]}
           handleAnswer={handleAnswer}
           quizData={quizData}
+          //   setQuizData={setQuizData}
         />
       ) : formState.page === 2 ? (
         <ResultPage />

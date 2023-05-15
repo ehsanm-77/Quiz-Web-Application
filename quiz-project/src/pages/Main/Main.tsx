@@ -1,9 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { useFormContext } from '../../utils/FormContext/FormContext';
+import { fetchQuizData } from '../../library/axios/axios';
 
 export default function Main({ question, handleAnswer, quizData }) {
   const [shuffledAnswers, setShuffledAnswers] = useState([]);
   const { formState, formDispatch } = useFormContext();
+  const [animate, setAnimate] = useState(false);
+  const [id, setId] = useState(0);
+
+  useEffect(() => {
+    setId(() => id + 1);
+  }, [question]);
+
+  useEffect(() => {
+    setAnimate(true); // Trigger the animation when the component mounts
+  }, [question]);
   useEffect(() => {
     if (question) {
       const answers = [question.correct_answer, ...question.incorrect_answers];
@@ -38,19 +49,27 @@ export default function Main({ question, handleAnswer, quizData }) {
   return (
     <>
       <div className="flex flex-col justify-start items-center h-full gap-10">
-        <div className="bg-[url('../../../src/assets/img/quiz3.jpg')] bg-cover bg-no-repeat bg-center text-white p-3 rounded-xl w-5/6 h-1/4 shadow-2xl">
+        <div
+          className={`bg-[url('../../../src/assets/img/quiz3.jpg')] bg-cover bg-no-repeat bg-center text-white p-3 rounded-xl w-5/6 h-1/4 shadow-2xl ${
+            animate ? 'animate-question-item' : ''
+          }`}
+          key={id}
+        >
           {questionText}
         </div>
-        <div className="grid grid-col-1 gap-4 w-full">
+        <div className="grid grid-col-1 gap-4 w-full" key={questionText}>
           {shuffledAnswers.map((answer, index) => (
             <button
               key={index}
-              className="w-3/4 bg-white text-black p-2 rounded-md mx-auto focus:bg-green-500 shadow-2xl"
+              className={`w-3/4 flex gap-2 bg-white text-black p-2 rounded-md mx-auto focus:bg-green-500 shadow-2xl ${
+                animate ? 'animate-answer-item' : ''
+              }`}
               onClick={() => {
                 handleAnswerSelection(answer);
               }}
             >
-              {answer}
+              <div>{index + 1}. </div>
+              <div>{answer}</div>
             </button>
           ))}
         </div>
