@@ -1,15 +1,14 @@
 import { useState } from 'react';
-import Test from './components/Test/Test';
 import {
   Box,
   ThemeProvider,
   Typography,
   createTheme,
-  Button,
   IconButton,
 } from '@mui/material';
-import { Brightness4, Brightness7, Brightness6 } from '@mui/icons-material';
+import { Brightness4, Brightness7 } from '@mui/icons-material';
 import { Container } from './layout/Container/Container';
+import { FormProvider } from './utils/FormContext/FormContext';
 
 function App() {
   const [currentTheme, setCurrentTheme] = useState('dark');
@@ -51,7 +50,9 @@ function App() {
           }}
         >
           <Typography className="w-full h-full flex justify-center items-center">
-            <Container currentTheme={currentTheme} />
+            <FormProvider>
+              <Container currentTheme={currentTheme} />
+            </FormProvider>
           </Typography>
         </Box>
         <div className="absolute top-0">

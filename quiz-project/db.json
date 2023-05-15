@@ -1,0 +1,448 @@
+{
+  "results": [
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "What is the name of your team in Star Wars: Republic Commando?",
+      "correct_answer": "Delta Squad",
+      "incorrect_answers": ["The Commandos", "Bravo Six", "Vader&#039;s Fist"]
+    },
+    {
+      "category": "Science: Mathematics",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What is the area of a circle with a diameter of 20 inches if &pi;= 3.1415?",
+      "correct_answer": "314.15 Inches",
+      "incorrect_answers": ["380.1215 Inches", "3141.5 Inches", "1256.6 Inches"]
+    },
+    {
+      "category": "Geography",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "How many countries are inside the United Kingdom?",
+      "correct_answer": "Four",
+      "incorrect_answers": ["Two", "Three", "One"]
+    },
+    {
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "When Gmail first launched, how much storage did it provide for your email?",
+      "correct_answer": "1GB",
+      "incorrect_answers": ["512MB", "5GB", "Unlimited"]
+    },
+    {
+      "category": "Science: Mathematics",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What is the Roman numeral for 500?",
+      "correct_answer": "D",
+      "incorrect_answers": ["L", "C", "X"]
+    },
+    {
+      "category": "Politics",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Before 2011, &quot;True Capitalist Radio&quot; was known by a different name. What was that name?",
+      "correct_answer": "True Conservative Radio",
+      "incorrect_answers": [
+        "True Republican Radio",
+        "Texan Capitalist Radio",
+        "United Capitalists"
+      ]
+    },
+    {
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "On which computer hardware device is the BIOS chip located?",
+      "correct_answer": "Motherboard",
+      "incorrect_answers": [
+        "Hard Disk Drive",
+        "Central Processing Unit",
+        "Graphics Processing Unit"
+      ]
+    },
+    {
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "What year was Canada founded in?",
+      "correct_answer": "1867",
+      "incorrect_answers": ["1798", "1859", "1668"]
+    },
+    {
+      "category": "General Knowledge",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "Which of the following chemicals are found in eggplant seeds?",
+      "correct_answer": "Nicotine",
+      "incorrect_answers": ["Mescaline", "Cyanide", "Psilocybin"]
+    },
+    {
+      "category": "Entertainment: Music",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Which artist released the 2012 single &quot;Harlem Shake&quot;, which was used in numerous YouTube videos in 2013?",
+      "correct_answer": "Baauer",
+      "incorrect_answers": ["RL Grime", "NGHTMRE", "Flosstradamus"]
+    },
+    {
+      "category": "Entertainment: Music",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "Which band is the longest active band in the world with no breaks or line-up changes?",
+      "correct_answer": "U2",
+      "incorrect_answers": ["Radiohead", "Rush", "Rolling Stones"]
+    },
+    {
+      "category": "General Knowledge",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "What is the romanized Arabic word for &quot;moon&quot;?",
+      "correct_answer": "Qamar",
+      "incorrect_answers": ["Najma", "Kawkab", "Shams"]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "In Left 4 Dead, what is the name of the virus, as designated by CEDA, that causes most humans to turn into the Infected?",
+      "correct_answer": "Green Flu",
+      "incorrect_answers": ["Yellow Fever", "T-Virus", "Raspberry Sniffles"]
+    },
+    {
+      "category": "Politics",
+      "type": "boolean",
+      "difficulty": "easy",
+      "question": "Despite being seperated into multiple countries, The Scandinavian countries are unified by all having the same monarch.",
+      "correct_answer": "False",
+      "incorrect_answers": ["True"]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "In &quot;Overwatch,&quot; what is the hero McCree&#039;s full name?",
+      "correct_answer": "Jesse McCree",
+      "incorrect_answers": [
+        "Jack &quot;McCree&quot; Morrison",
+        "Gabriel Reyes",
+        "Jamison &quot;Deadeye&quot; Fawkes"
+      ]
+    },
+    {
+      "category": "Geography",
+      "type": "boolean",
+      "difficulty": "medium",
+      "question": "There exists an island named &quot;Java&quot;.",
+      "correct_answer": "True",
+      "incorrect_answers": ["False"]
+    },
+    {
+      "category": "Entertainment: Television",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "In the show, Doctor Who, what does T.A.R.D.I.S stand for?",
+      "correct_answer": "Time And Relative Dimensions In Space",
+      "incorrect_answers": [
+        "Time And Resting Dimensions In Space",
+        "Time And Relative Dimensions In Style",
+        "Toilet Aid Rope Dog Is Soup"
+      ]
+    },
+    {
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "How many sonatas did Ludwig van Beethoven write?",
+      "correct_answer": "32",
+      "incorrect_answers": ["50", "31", "21"]
+    },
+    {
+      "category": "Vehicles",
+      "type": "boolean",
+      "difficulty": "medium",
+      "question": "When BMW was established in 1916, it was producing automobiles.",
+      "correct_answer": "False",
+      "incorrect_answers": ["True"]
+    },
+    {
+      "category": "Celebrities",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "How tall is Tom Cruise?",
+      "correct_answer": "5&prime; 7&Prime;",
+      "incorrect_answers": [
+        "5&prime; 9&Prime;",
+        "5&prime; 4&Prime;",
+        "5&prime; 5&Prime;"
+      ]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "What animal is on Link&#039;s pajamas in The Legend of Zelda: The Wind Waker?",
+      "correct_answer": "Crawfish",
+      "incorrect_answers": ["Lobster", "Salmon", "Swordfish"]
+    },
+    {
+      "category": "Entertainment: Japanese Anime & Manga",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "In &quot;The Melancholy of Haruhi Suzumiya&quot; series, the SOS Brigade club leader is unknowingly treated as a(n) __ by her peers.",
+      "correct_answer": "God",
+      "incorrect_answers": ["Alien", "Time Traveler", "Esper"]
+    },
+    {
+      "category": "Entertainment: Japanese Anime & Manga",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What year did the anime &quot;Himouto! Umaru-chan&quot; air?",
+      "correct_answer": "2015",
+      "incorrect_answers": ["2014", "2012", "2013"]
+    },
+    {
+      "category": "Entertainment: Music",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Which 80s band is fronted by singer/guitarist Robert Smith?",
+      "correct_answer": "The Cure",
+      "incorrect_answers": [
+        "The Smiths",
+        "Echo &amp; the Bunnymen",
+        "New Order"
+      ]
+    },
+    {
+      "category": "Science: Computers",
+      "type": "boolean",
+      "difficulty": "hard",
+      "question": "The IBM PC used an Intel 8008 microprocessor clocked at 4.77 MHz and 8 kilobytes of memory.",
+      "correct_answer": "False",
+      "incorrect_answers": ["True"]
+    },
+    {
+      "category": "Entertainment: Japanese Anime & Manga",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "On what medium was &quot;Clannad&quot; first created?",
+      "correct_answer": "Visual novel",
+      "incorrect_answers": ["Anime", "Manga", "Light novel"]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What year did the James Cameron film &quot;Titanic&quot; come out in theaters?",
+      "correct_answer": "1997",
+      "incorrect_answers": ["1996", "1998", "1999"]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "boolean",
+      "difficulty": "medium",
+      "question": "In Monster Hunter Generations, guild style is a type of hunting style.",
+      "correct_answer": "True",
+      "incorrect_answers": ["False"]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "In the game &quot;Brawlhalla&quot;, what species is the character B&ouml;dvar is?",
+      "correct_answer": "Half Human / Half Bear",
+      "incorrect_answers": [
+        "A Human",
+        "Half Wolf / Half Bear",
+        "Half Tiger /  Half Human"
+      ]
+    },
+    {
+      "category": "Science & Nature",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "How much radiation does a banana emit?",
+      "correct_answer": "0.1 Microsievert",
+      "incorrect_answers": [
+        "0.3 Microsievert",
+        "0.5 Microsievert",
+        "0.7 Microsievert"
+      ]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Who created the indie adventure game &quot;Night in the Woods&quot;?",
+      "correct_answer": "Alec Holowka",
+      "incorrect_answers": ["Ron Gilbert", "Tim Schafer", " Tommy Refenes"]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What is the name of the first level in &quot;Call of Duty: World at War&quot;?",
+      "correct_answer": "Semper Fi",
+      "incorrect_answers": ["Ring of Steel", "Vendetta", "Eviction"]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "In the &quot;Call Of Duty: Zombies&quot; map &quot;Origins&quot;, where is &quot;Stamin-Up&quot; located?",
+      "correct_answer": "Generator 5",
+      "incorrect_answers": ["Generator 3", "Generator 4", "Excavation Site"]
+    },
+    {
+      "category": "Entertainment: Japanese Anime & Manga",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "In &quot;Highschool DxD&quot;, Koneko Toujou is from what race?",
+      "correct_answer": "Nekomata",
+      "incorrect_answers": ["Kitsune", "Human", "Kappa"]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What former MOBA, created by Waystone Games and published by EA, was shut down in 2014?",
+      "correct_answer": "Dawngate",
+      "incorrect_answers": ["Strife", "League of Legends", "Heroes of Newerth"]
+    },
+    {
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "How old was Adolf Hitler when he died?",
+      "correct_answer": "56",
+      "incorrect_answers": ["43", "65", "47"]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which Crypt of the NecroDancer (2015) character has a soundtrack by Jake &quot;Virt&quot; Kaufman?",
+      "correct_answer": "Uncle Eli",
+      "incorrect_answers": ["Cadence", "Nocturna", "Octavian (Bard)"]
+    },
+    {
+      "category": "Celebrities",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "Billy Herrington is from which US state?",
+      "correct_answer": "New York",
+      "incorrect_answers": ["Arizona", "California", "Georgia"]
+    },
+    {
+      "category": "Vehicles",
+      "type": "boolean",
+      "difficulty": "easy",
+      "question": "BMW M GmbH is a subsidiary of BMW AG that focuses on car performance.",
+      "correct_answer": "True",
+      "incorrect_answers": ["False"]
+    },
+    {
+      "category": "Science & Nature",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Which noble gas has the lowest atomic number?",
+      "correct_answer": "Helium",
+      "incorrect_answers": ["Neon", "Argon", "Krypton"]
+    },
+    {
+      "category": "General Knowledge",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "How many furlongs are there in a mile?",
+      "correct_answer": "Eight",
+      "incorrect_answers": ["Two", "Four", "Six"]
+    },
+    {
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "On what street did the 1666 Great Fire of London start?",
+      "correct_answer": "Pudding Lane",
+      "incorrect_answers": [
+        "Baker Street",
+        "Houses of Parliament",
+        "St Paul&#039;s Cathedral"
+      ]
+    },
+    {
+      "category": "Sports",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Who did Steven Gerrard win the Champions League with?",
+      "correct_answer": "Liverpool",
+      "incorrect_answers": ["Real Madrid", "Chelsea", "Man City"]
+    },
+    {
+      "category": "Entertainment: Books",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "In which classic novel by Mark Twain did a beggar and Prince of Wales switch clothes, and learn about social class inequality?",
+      "correct_answer": "The Prince and the Pauper",
+      "incorrect_answers": [
+        "Hamlet",
+        "Wealthy Boy and the Schmuck",
+        "A Modern Twain Story"
+      ]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "In the film &quot;Requiem for a Dream&quot;, what drug does Jared Leto&#039;s character get addicted to?",
+      "correct_answer": "Heroin",
+      "incorrect_answers": ["Cocaine", "Marijuana", "Oxycodone"]
+    },
+    {
+      "category": "Politics",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "The Watergate Scandal occured in what year?",
+      "correct_answer": "1972",
+      "incorrect_answers": ["1973", "1974", "1971"]
+    },
+    {
+      "category": "Science & Nature",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "When was the first mammal successfully cloned?",
+      "correct_answer": "1996",
+      "incorrect_answers": ["2009", "1999", "1985"]
+    },
+    {
+      "category": "Entertainment: Music",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "Which member of the Wu-Tang Clan had only one verse in their debut album Enter the Wu-Tang (36 Chambers)?",
+      "correct_answer": "Masta Killa",
+      "incorrect_answers": ["Method Man", "Inspectah Deck", "GZA"]
+    },
+    {
+      "category": "Entertainment: Music",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which European capital city gives its name to a 1981 song by Ultravox?",
+      "correct_answer": "Vienna",
+      "incorrect_answers": ["Berlin", "Paris", "Brussels"]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "In the PAYDAY series, where did Dallas start his criminal career?",
+      "correct_answer": "Chicago, Illinois",
+      "incorrect_answers": [
+        "Dallas, Texas",
+        "New York City, New York",
+        "Boston, Massachusetts"
+      ]
+    }
+  ]
+}
