@@ -5,7 +5,7 @@ import { useFormContext } from '../../utils/FormContext/FormContext';
 import { fetchQuizData } from '../../library/axios/axios';
 import { ResultPage } from '../../pages/ResultPage/ResultPage';
 
-const MainSection = () => {
+const MainSection = (currentTheme) => {
   const { formState, formDispatch } = useFormContext();
   const [quizData, setQuizData] = useState([]);
 
@@ -36,6 +36,7 @@ const MainSection = () => {
           question={quizData[formState.currentQuestionIndex]}
           handleAnswer={handleAnswer}
           quizData={quizData}
+          currentTheme={currentTheme}
           //   setQuizData={setQuizData}
         />
       ) : formState.page === 2 ? (

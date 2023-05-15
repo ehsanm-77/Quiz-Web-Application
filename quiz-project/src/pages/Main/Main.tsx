@@ -2,7 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useFormContext } from '../../utils/FormContext/FormContext';
 import { fetchQuizData } from '../../library/axios/axios';
 
-export default function Main({ question, handleAnswer, quizData }) {
+export default function Main({
+  question,
+  handleAnswer,
+  quizData,
+  currentTheme,
+}) {
   const [shuffledAnswers, setShuffledAnswers] = useState([]);
   const { formState, formDispatch } = useFormContext();
   const [animate, setAnimate] = useState(false);
@@ -50,18 +55,18 @@ export default function Main({ question, handleAnswer, quizData }) {
     <>
       <div className="flex flex-col justify-start items-center h-full gap-10">
         <div
-          className={`bg-[url('../../../src/assets/img/quiz3.jpg')] bg-cover bg-no-repeat bg-center text-white p-3 rounded-xl w-5/6 h-1/4 shadow-2xl ${
+          className={`bg-white text-black p-3 rounded-xl w-5/6 h-1/4 shadow-2xl ${
             animate ? 'animate-question-item' : ''
           }`}
           key={id}
         >
-          {questionText}
+          {id} : {questionText}
         </div>
         <div className="grid grid-col-1 gap-4 w-full" key={questionText}>
           {shuffledAnswers.map((answer, index) => (
             <button
               key={index}
-              className={`w-3/4 flex gap-2 bg-white text-black p-2 rounded-md mx-auto focus:bg-green-500 shadow-2xl ${
+              className={`w-3/4 flex gap-2 bg-yellow-100 text-black p-2 rounded-md mx-auto focus:bg-green-500 shadow-2xl ${
                 animate ? 'animate-answer-item' : ''
               }`}
               onClick={() => {

@@ -11,12 +11,12 @@ body {
   width: 100%;
   height: 100%;
 }
-.gradient-bg {
+/* .gradient-bg {
   background: linear-gradient(to right, #86e546, #9b3df9, #ffdf6b);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */
 @keyframes moveUp {
   0% {
     transform: translateY(0);
@@ -58,4 +58,17 @@ body {
 }
 .animate-question-item {
   animation: scale 1s ease forwards;
+}
+
+@keyframes moveToTop {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-45vh);
+  }
+}
+.animate-result-image {
+  animation: moveToTop 2s ease forwards;
 }
