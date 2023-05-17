@@ -18,7 +18,7 @@ export default function Main({
   }, [question]);
 
   useEffect(() => {
-    setAnimate(true); // Trigger the animation when the component mounts
+    setAnimate(true);
   }, [question]);
   useEffect(() => {
     if (question) {
@@ -27,6 +27,7 @@ export default function Main({
     }
   }, [question]);
   const shuffleAnswers = (answers) => {
+    console.log(answers);
     const shuffled = answers.sort(() => Math.random() - 0.5);
     setShuffledAnswers(shuffled);
   };
@@ -38,9 +39,7 @@ export default function Main({
     console.log(formState.currentQuestionIndex, quizData.length - 1);
     if (formState.currentQuestionIndex === quizData.length - 1) {
       console.log('EMO');
-      // Perform form validation if needed
-      // Update the form state to move to the next page
-      formDispatch({ type: 'CHANGE_PAGE', payload: { page: 2 } });
+      formDispatch({ type: 'CHANGE_PAGE', payload: { page: 3 } });
     }
   };
 
@@ -60,13 +59,13 @@ export default function Main({
           }`}
           key={id}
         >
-          {id} : {questionText}
+          {id} - {questionText}
         </div>
         <div className="grid grid-col-1 gap-4 w-full" key={questionText}>
           {shuffledAnswers.map((answer, index) => (
             <button
               key={index}
-              className={`w-3/4 flex gap-2 bg-yellow-100 text-black p-2 rounded-md mx-auto focus:bg-green-500 shadow-2xl ${
+              className={`w-3/4 rounded-full flex gap-2 bg-teal-300 text-black p-2 rounded-md mx-auto focus:bg-green-500 shadow-2xl ${
                 animate ? 'animate-answer-item' : ''
               }`}
               onClick={() => {

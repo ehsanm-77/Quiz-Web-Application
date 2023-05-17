@@ -18,10 +18,12 @@ export const ResultPage = () => {
         <div className="flex flex-col justify-center items-center gap-5">
           <img
             src="./src/assets/img/win.svg"
-            className="w-40 rounded-full"
+            className="w-40 rounded-full mb-2"
             alt=""
           />
-          <div>✨ CONGRATS ✨</div>
+          <div className="text-2xl animate-bounce bg-green-300 p-2 rounded-full">
+            ✨ CONGRATS ✨
+          </div>
         </div>
       ) : (
         <div className="flex flex-col justify-center items-center gap-5">
@@ -33,7 +35,9 @@ export const ResultPage = () => {
           <div> TRY MORE </div>
         </div>
       )}
-      YOUR SCORE = {(formState.score * 100) / formState.quizData.length} %
+      <div className="text-xl font-bold">
+        YOUR SCORE = {(formState.score * 100) / formState.quizData.length} %
+      </div>
       <button
         onClick={() => {
           setTimeout(handleAgain, 2000);
@@ -41,7 +45,7 @@ export const ResultPage = () => {
         }}
       >
         <div>
-          <div>Again</div>
+          <div className="text-xl font-bold">Again</div>
         </div>
       </button>
     </div>
