@@ -3,6 +3,7 @@ import { useFormContext } from '../../utils/FormContext/FormContext';
 
 export const ResultPage = () => {
   const { formState, formDispatch } = useFormContext();
+
   const [animate, setAnimate] = useState(false);
 
   const handleAgain = () => {
@@ -11,6 +12,8 @@ export const ResultPage = () => {
   const handleAgainAnimation = () => {
     setAnimate(true);
   };
+  console.log(formState);
+
   console.log(formState.score);
   return (
     <div className="flex h-full flex-col justify-evenly items-center gap-10">
@@ -42,6 +45,7 @@ export const ResultPage = () => {
         onClick={() => {
           setTimeout(handleAgain, 2000);
           handleAgainAnimation();
+          formState.currentQuestionIndex = 0;
         }}
       >
         <div>

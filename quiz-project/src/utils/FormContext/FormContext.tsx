@@ -4,7 +4,7 @@ import { useContext, useReducer, ReactNode, createContext } from 'react';
 const initialFormState = {
   page: 0,
   currentPage: 'start',
-  quizData: null,
+  quizData: [],
   currentQuestionIndex: 0,
   score: 0,
 };

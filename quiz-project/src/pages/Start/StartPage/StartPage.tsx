@@ -7,6 +7,8 @@ const StartPage = () => {
 
   const handleStart = () => {
     formDispatch({ type: 'CHANGE_PAGE', payload: { page: 1 } });
+    formState.quizData = '';
+    console.log(formState);
   };
   const handleAnimation = () => {
     setAnimate(true);

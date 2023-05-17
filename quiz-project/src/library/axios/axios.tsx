@@ -1,18 +1,21 @@
 import axios from 'axios';
-export const question = axios.create({
-  baseURL: 'http://localhost:3000',
-});
-export const fetchQuizData = async () => {
+
+export const fetchQuizData = async (amount, category, difficulty) => {
   try {
-    const response = await axios.get('http://localhost:3000/results'); // Replace '/api/quiz' with your actual API endpoint
-    const quizData = response.data;
-    // Shuffle the answers for each question
+    const amountOfQuestion = amount;
+    const catagoryOfQuiz = category;
+    const difficultyOfQuiz = difficulty;
+    const response = await axios.get(
+      `https://opentdb.com/api.php?amount=${amountOfQuestion}${catagoryOfQuiz}${difficultyOfQuiz}`
+    );
+    console.log(response);
+    const quizData = response.data.results;
+    console.log(quizData);
     quizData.forEach((question) => {
       const answers = [question.correct_answer, ...question.incorrect_answers];
       shuffleAnswers(answers);
       question.answers = answers;
     });
-
     return quizData;
   } catch (error) {
     throw new Error('Failed to fetch quiz data');
