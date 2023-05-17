@@ -7,14 +7,15 @@ export const ResultPage = () => {
   const [animate, setAnimate] = useState(false);
 
   const handleAgain = () => {
+    formState.score = 0;
+    formState.currentQuestionIndex = 0;
     formDispatch({ type: 'CHANGE_PAGE', payload: { page: 0 } });
   };
   const handleAgainAnimation = () => {
     setAnimate(true);
   };
-  console.log(formState);
 
-  console.log(formState.score);
+  console.log(formState.score, formState.quizData.length);
   return (
     <div className="flex h-full flex-col justify-evenly items-center gap-10">
       {(formState.score * 100) / formState.quizData.length > 50 ? (
@@ -45,7 +46,6 @@ export const ResultPage = () => {
         onClick={() => {
           setTimeout(handleAgain, 2000);
           handleAgainAnimation();
-          formState.currentQuestionIndex = 0;
         }}
       >
         <div>
