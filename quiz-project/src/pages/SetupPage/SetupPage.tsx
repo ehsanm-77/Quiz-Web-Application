@@ -9,23 +9,41 @@ export default function SetupPage() {
   const [catagory, setCatagory] = useState('');
   const [dificulty, setDificulty] = useState('');
   const [number, setNumber] = useState('');
-  const [isValidNumber, setIsValidNumber] = useState(false);
+  const [isValidNumber, setIsValidNumber] = useState(true);
+  const [numberErrorMessage, setNumberErrorMessage] = useState('');
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   const handleSetup = () => {
     formDispatch({ type: 'CHANGE_PAGE', payload: { page: 2 } });
   };
+
   useEffect(() => {
-    number !== '' ? setIsValidNumber(true) : setIsValidNumber(false);
-  }, [number]);
+    if (isSubmitted || number !== '') {
+      if (number === '') {
+        setIsValidNumber(false);
+        setNumberErrorMessage('Please fill in the number');
+      } else if (isNaN(number) || +number < 1 || +number > 50) {
+        setIsValidNumber(false);
+        setNumberErrorMessage('Please enter a number between 1 and 50');
+      } else {
+        setIsValidNumber(true);
+        setNumberErrorMessage('');
+      }
+    }
+  }, [number, isSubmitted]);
+
   const handleNumber = (e) => {
     setNumber(e.target.value);
   };
+
   const handleCategory = (e) => {
     setCatagory(e.target.value);
   };
+
   const handleDificulty = (e) => {
     setDificulty(e.target.value);
   };
-  console.log(catagory);
+
   const handleData = () => {
     setIsLoading(true);
     fetchQuizData(number, `&category=${catagory}`, `&difficulty=${dificulty}`)
@@ -37,32 +55,39 @@ export default function SetupPage() {
       .catch((error) => console.error(error))
       .finally(() => setIsLoading(false));
   };
-  console.log(formState.quizData);
+
   const handleSetupButton = () => {
     setSetup(true);
   };
-  console.log(formState);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSubmitted(true);
+    if (isValidNumber) {
+      handleData();
+      handleSetupButton();
+      setTimeout(handleSetup, 500);
+    }
+  };
 
   return (
-    <div className="h-full flex flex-col justify-between items-center">
+    <div className="h-full flex flex-col justify-evenly items-center">
       <div className="text-2xl font-bold">Setup Quiz</div>
       <div className="w-3/4">
-        <form action="" className=" p-10 flex flex-col gap-5">
-          <div className="flex flex-col gap-2">
-            <label htmlFor=""> Number Of Question</label>
+        <form onSubmit={handleSubmit} className="p-5 flex flex-col">
+          <div className="flex flex-col">
+            <label htmlFor="">Number Of Question</label>
             <input
-              className="p-2 rounded-md bg-yellow-300 focus:outline-none"
+              className="p-2 rounded-md bg-yellow-300 text-black focus:outline-none"
               placeholder="Enter Number"
               type="text"
               onChange={handleNumber}
             />
-            {!isValidNumber ? (
-              <div className="text-red-400">plese enter number</div>
-            ) : (
-              ''
+            {!isValidNumber && (isSubmitted || number !== '') && (
+              <div className="text-red-400">{numberErrorMessage}</div>
             )}
           </div>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col">
             <label htmlFor="">Category</label>
             <select
               className="p-2 rounded-md bg-yellow-300 focus:outline-none text-black"
@@ -76,7 +101,7 @@ export default function SetupPage() {
               <option value="27">Animals</option>
             </select>
           </div>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col">
             <label htmlFor="">Difficulty</label>
             <select
               className="p-2 rounded-md bg-yellow-300 focus:outline-none text-black"
@@ -93,16 +118,18 @@ export default function SetupPage() {
         </form>
       </div>
       <button
-        className="flex flex-col mb-5 justify-center items-center"
+        className="flex flex-col mb-10 justify-center items-center"
         onClick={() => {
+          setIsSubmitted(true);
           if (isValidNumber) {
             handleData();
             handleSetupButton();
             setTimeout(handleSetup, 500);
           }
         }}
+        type="submit"
       >
-        <div className="text-2xl">SRART</div>
+        <div className="text-2xl">START</div>
         {setup ? (
           <img
             src="./src/assets/img/power-start-green.svg"
@@ -119,57 +146,4 @@ export default function SetupPage() {
       </button>
     </div>
   );
-}
-{
-  /* <form action="">
-        <Grid
-          container
-          className="p-5"
-          rowGap={1}
-          columns={{ xs: 1, md: 1, sm: 1 }}
-        >
-          <Grid xs={1} md={1} sm={1}>
-            <TextField
-              variant="filled"
-              color="primary"
-              label="Number Of Question"
-              className="textfield"
-              fullWidth
-              sx={{
-                bgcolor: '#565e5e',
-              }}
-            />
-          </Grid>
-          <Grid xs={1} sm={1} md={1}>
-            <FormControl fullWidth>
-              <InputLabel id="demo-simple-select-label">Age</InputLabel>
-              <Select
-                sx={{
-                  bgcolor: '#565e5e',
-                }}
-                onChange={handleChange}
-              >
-                <MenuItem value={catagory}>A</MenuItem>
-                <MenuItem>B</MenuItem>
-                <MenuItem>C</MenuItem>
-              </Select>
-            </FormControl>
-          </Grid>
-          <Grid xs={1} sm={1} md={1}>
-            <FormControl fullWidth>
-              <InputLabel id="demo-simple-select-label">Age</InputLabel>
-              <Select
-                sx={{
-                  bgcolor: '#565e5e',
-                }}
-                onChange={handleChange}
-              >
-                <MenuItem>A</MenuItem>
-                <MenuItem>B</MenuItem>
-                <MenuItem>C</MenuItem>
-              </Select>
-            </FormControl>
-          </Grid>
-        </Grid>
-      </form> */
 }

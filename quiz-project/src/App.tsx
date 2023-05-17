@@ -11,7 +11,7 @@ import { Container } from './layout/Container/Container';
 import { FormProvider } from './utils/FormContext/FormContext';
 
 function App() {
-  const [currentTheme, setCurrentTheme] = useState('dark');
+  const [currentTheme, setCurrentTheme] = useState('light');
 
   const darkTheme = createTheme({
     typography: {
