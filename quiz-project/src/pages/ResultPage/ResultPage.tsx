@@ -40,7 +40,8 @@ export const ResultPage = () => {
         </div>
       )}
       <div className="text-xl font-bold">
-        YOUR SCORE = {(formState.score * 100) / formState.quizData.length} %
+        YOUR SCORE ={' '}
+        {Math.round((formState.score * 100) / formState.quizData.length)} %
       </div>
       <button
         onClick={() => {

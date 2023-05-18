@@ -69,7 +69,7 @@ export default function Main() {
           {shuffledAnswers.map((answer, index) => (
             <button
               key={index}
-              className={`w-3/4 rounded-full flex gap-2 bg-teal-300 text-black p-2 rounded-md mx-auto focus:bg-green-500 shadow-2xl ${
+              className={`w-3/4 flex gap-2 bg-teal-300 text-black p-2 rounded-md mx-auto focus:bg-green-500 shadow-2xl ${
                 animate ? 'animate-answer-item' : ''
               }`}
               onClick={() => {

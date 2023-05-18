@@ -21,10 +21,10 @@ export default function SetupPage() {
     if (isSubmitted || number !== '') {
       if (number === '') {
         setIsValidNumber(false);
-        setNumberErrorMessage('Please fill in the number');
+        setNumberErrorMessage('Please Fill In The Number');
       } else if (isNaN(number) || +number < 10 || +number > 50) {
         setIsValidNumber(false);
-        setNumberErrorMessage('Please enter a number between 10 and 50');
+        setNumberErrorMessage('Please Enter A Number Between 10 And 50');
       } else {
         setIsValidNumber(true);
         setNumberErrorMessage('');
@@ -133,17 +133,9 @@ export default function SetupPage() {
       >
         <div className="text-2xl">START</div>
         {setup ? (
-          <img
-            src="./src/assets/img/power-start-green.svg"
-            className="w-10"
-            alt=""
-          />
+          <img src="./src/assets/img/power-green.svg" className="w-10" alt="" />
         ) : (
-          <img
-            src="./src/assets/img/power-start-red.svg"
-            className="w-10"
-            alt=""
-          />
+          <img src="./src/assets/img/power-red.svg" className="w-10" alt="" />
         )}
       </button>
     </div>
