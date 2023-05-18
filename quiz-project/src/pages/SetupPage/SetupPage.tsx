@@ -22,13 +22,15 @@ export default function SetupPage() {
       if (number === '') {
         setIsValidNumber(false);
         setNumberErrorMessage('Please fill in the number');
-      } else if (isNaN(number) || +number < 1 || +number > 50) {
+      } else if (isNaN(number) || +number < 10 || +number > 50) {
         setIsValidNumber(false);
-        setNumberErrorMessage('Please enter a number between 1 and 50');
+        setNumberErrorMessage('Please enter a number between 10 and 50');
       } else {
         setIsValidNumber(true);
         setNumberErrorMessage('');
       }
+    } else {
+      number === '' ? setIsValidNumber(false) : setIsValidNumber(true);
     }
   }, [number, isSubmitted]);
 

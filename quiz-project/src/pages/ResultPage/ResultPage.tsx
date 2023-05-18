@@ -36,7 +36,7 @@ export const ResultPage = () => {
             className="w-40 rounded-full"
             alt=""
           />
-          <div> TRY MORE </div>
+          <div className="text-2xl"> TRY MORE </div>
         </div>
       )}
       <div className="text-xl font-bold">
