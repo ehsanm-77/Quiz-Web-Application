@@ -22,9 +22,9 @@ export default function SetupPage() {
       if (number === '') {
         setIsValidNumber(false);
         setNumberErrorMessage('Please Fill In The Number');
-      } else if (isNaN(number) || +number < 10 || +number > 50) {
+      } else if (isNaN(number) || +number < 5 || +number > 50) {
         setIsValidNumber(false);
-        setNumberErrorMessage('Please Enter A Number Between 10 And 50');
+        setNumberErrorMessage('Please Enter A Number Between 5 And 50');
       } else {
         setIsValidNumber(true);
         setNumberErrorMessage('');

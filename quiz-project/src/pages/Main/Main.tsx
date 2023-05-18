@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useFormContext } from '../../utils/FormContext/FormContext';
-import { fetchQuizData } from '../../library/axios/axios';
 
 export default function Main() {
   const [shuffledAnswers, setShuffledAnswers] = useState([]);
@@ -34,7 +33,7 @@ export default function Main() {
       console.log('EMO');
       formDispatch({ type: 'CHANGE_PAGE', payload: { page: 3 } });
     } else {
-      setQuestionId(questionId + 1); // Increment questionId when moving to the next question
+      setQuestionId(questionId + 1);
     }
   };
   console.log(formState);
@@ -57,13 +56,13 @@ export default function Main() {
     <>
       <div className="flex flex-col justify-start items-center h-full gap-10">
         <div
-          id={`question-${questionId}`} // Set the ID using questionId
+          id={`question-${questionId}`}
           className={`bg-white text-black p-3 rounded-xl w-5/6 h-1/4 shadow-2xl ${
             animate ? 'animate-question-item' : ''
           }`}
-          key={questionId} // Use questionId as the key
+          key={formState.currentQuestionIndex}
         >
-          {questionId + 1} - {questionText}
+          {formState.currentQuestionIndex + 1} - {questionText}
         </div>
         <div className="grid grid-col-1 gap-4 w-full" key={questionText}>
           {shuffledAnswers.map((answer, index) => (

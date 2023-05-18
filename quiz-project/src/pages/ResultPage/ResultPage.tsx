@@ -45,7 +45,7 @@ export const ResultPage = () => {
       </div>
       <button
         onClick={() => {
-          setTimeout(handleAgain, 2000);
+          setTimeout(handleAgain, 500);
           handleAgainAnimation();
         }}
       >
