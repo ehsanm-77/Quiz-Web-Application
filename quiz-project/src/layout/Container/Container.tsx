@@ -1,7 +1,7 @@
 import Header from '../Header/Header';
 import MainSection from '../MainSection/MainSection';
 
-export const Container = ({ currentTheme }) => {
+export const Container = ({ currentTheme }: any) => {
   return (
     <>
       <div

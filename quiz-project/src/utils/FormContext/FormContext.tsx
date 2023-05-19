@@ -10,7 +10,7 @@ const initialFormState = {
 };
 
 // Define the form reducer function
-const formReducer = (state, action) => {
+const formReducer = (state: any, action: any) => {
   switch (action.type) {
     case 'SET_CURRENT_PAGE':
       return { ...state, currentPage: action.payload };
@@ -28,13 +28,13 @@ const formReducer = (state, action) => {
 };
 
 // Create the form context
-const FormContext = createContext();
+const FormContext = createContext({});
 
 // Custom hook to access the form context
 export const useFormContext = () => useContext(FormContext);
 
 // Form context provider component
-export const FormProvider = ({ children }) => {
+export const FormProvider = ({ children }: any) => {
   const [formState, formDispatch] = useReducer(formReducer, initialFormState);
 
   return (

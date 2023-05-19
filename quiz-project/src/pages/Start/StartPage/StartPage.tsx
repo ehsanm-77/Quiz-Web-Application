@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useFormContext } from '../../../utils/FormContext/FormContext';
 
 const StartPage = () => {
-  const { formState, formDispatch } = useFormContext();
+  const { formState, formDispatch }: any = useFormContext();
   const [animate, setAnimate] = useState(false);
 
   const handleStart = () => {

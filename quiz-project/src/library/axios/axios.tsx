@@ -1,6 +1,10 @@
 import axios from 'axios';
 
-export const fetchQuizData = async (amount, category, difficulty) => {
+export const fetchQuizData = async (
+  amount: any,
+  category: any,
+  difficulty: any
+) => {
   try {
     const response = await axios.get(
       `https://opentdb.com/api.php?amount=${amount}${category}${difficulty}`

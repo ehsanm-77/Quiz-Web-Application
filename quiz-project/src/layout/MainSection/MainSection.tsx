@@ -5,8 +5,8 @@ import { ResultPage } from '../../pages/ResultPage/ResultPage';
 import SetupPage from '../../pages/SetupPage/SetupPage';
 
 const MainSection = () => {
-  const { formState, formDispatch } = useFormContext();
-
+  const { formState, formDispatch }: any = useFormContext();
+  console.log(formDispatch);
   return (
     <>
       {formState.page === 0 ? (

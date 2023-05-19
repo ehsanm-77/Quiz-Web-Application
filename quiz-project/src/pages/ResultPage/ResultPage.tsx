@@ -1,19 +1,12 @@
-import { useState } from 'react';
 import { useFormContext } from '../../utils/FormContext/FormContext';
 
 export const ResultPage = () => {
-  const { formState, formDispatch } = useFormContext();
-
-  const [animate, setAnimate] = useState(false);
+  const { formState, formDispatch }: any = useFormContext();
 
   const handleAgain = () => {
     formState.score = 0;
     formState.currentQuestionIndex = 0;
     formDispatch({ type: 'CHANGE_PAGE', payload: { page: 0 } });
-  };
-
-  const handleAgainAnimation = () => {
-    setAnimate(true);
   };
 
   console.log(formState.score, formState.quizData.length);
@@ -47,7 +40,6 @@ export const ResultPage = () => {
       <button
         onClick={() => {
           setTimeout(handleAgain, 500);
-          handleAgainAnimation();
         }}
       >
         <div>

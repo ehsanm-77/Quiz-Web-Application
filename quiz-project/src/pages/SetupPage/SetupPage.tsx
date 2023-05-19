@@ -3,9 +3,8 @@ import { useFormContext } from '../../utils/FormContext/FormContext';
 import { useState, useEffect } from 'react';
 
 export default function SetupPage() {
-  const { formState, formDispatch } = useFormContext();
+  const { formState, formDispatch }: any = useFormContext();
   const [setup, setSetup] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
   const [category, setCategory] = useState('');
   const [difficulty, setDifficulty] = useState('');
   const [number, setNumber] = useState('');
@@ -22,7 +21,7 @@ export default function SetupPage() {
       if (number === '') {
         setIsValidNumber(false);
         setNumberErrorMessage('Please Fill In The Number');
-      } else if (isNaN(number) || +number < 5 || +number > 50) {
+      } else if (isNaN(+number) || +number < 5 || +number > 50) {
         setIsValidNumber(false);
         setNumberErrorMessage('Please Enter A Number Between 5 And 50');
       } else {
@@ -34,35 +33,33 @@ export default function SetupPage() {
     }
   }, [number, isSubmitted]);
 
-  const handleNumber = (e) => {
+  const handleNumber = (e: any) => {
     setNumber(e.target.value);
   };
 
-  const handleCategory = (e) => {
+  const handleCategory = (e: any) => {
     setCategory(e.target.value);
   };
 
-  const handleDifficulty = (e) => {
+  const handleDifficulty = (e: any) => {
     setDifficulty(e.target.value);
   };
 
   const handleData = () => {
-    setIsLoading(true);
     fetchQuizData(number, `&category=${category}`, `&difficulty=${difficulty}`)
       .then((data) => {
         formDispatch({ type: 'SET_QUIZ_DATA', payload: data });
         console.log(data);
         formState.quizData === data;
       })
-      .catch((error) => console.error(error))
-      .finally(() => setIsLoading(false));
+      .catch((error) => console.error(error));
   };
 
   const handleSetupButton = () => {
     setSetup(true);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     setIsSubmitted(true);
     if (isValidNumber) {

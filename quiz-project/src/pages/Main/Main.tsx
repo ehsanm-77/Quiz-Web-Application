@@ -3,7 +3,7 @@ import { useFormContext } from '../../utils/FormContext/FormContext';
 
 export default function Main() {
   const [shuffledAnswers, setShuffledAnswers] = useState([]);
-  const { formState, formDispatch } = useFormContext();
+  const { formState, formDispatch }: any = useFormContext();
   const [animate, setAnimate] = useState(false);
   const [questionId, setQuestionId] = useState(0);
   const question = formState.quizData[formState.currentQuestionIndex];
@@ -19,7 +19,7 @@ export default function Main() {
     }
   }, [question]);
 
-  const shuffleAnswers = (answers) => {
+  const shuffleAnswers = (answers: any) => {
     const shuffled = answers.sort(() => Math.random() - 0.5);
     setShuffledAnswers(shuffled);
   };
@@ -38,8 +38,8 @@ export default function Main() {
   };
   console.log(formState);
 
-  const handleAnswerSelection = (selectedAnswer) => {
-    const handleAnswer = (selectedAnswer) => {
+  const handleAnswerSelection = (selectedAnswer: any) => {
+    const handleAnswer = (selectedAnswer: any) => {
       const currentQuestion =
         formState.quizData[formState.currentQuestionIndex];
       if (currentQuestion.correct_answer === selectedAnswer) {
