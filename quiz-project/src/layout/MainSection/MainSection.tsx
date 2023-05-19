@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import StartPage from '../../pages/Start/StartPage/StartPage';
 import Main from '../../pages/Main/Main';
 import { useFormContext } from '../../utils/FormContext/FormContext';

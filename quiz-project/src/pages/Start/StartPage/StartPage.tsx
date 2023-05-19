@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useFormContext } from '../../../utils/FormContext/FormContext';
 
 const StartPage = () => {
@@ -15,7 +15,7 @@ const StartPage = () => {
   };
   return (
     <div className="flex flex-col items-center justify-between h-full mb-16 mt-28">
-      <div className="text-2xl font-bold gradient-bg">Wellcome To Quiz App</div>
+      <div className="text-2xl font-bold gradient-bg">Welcome To Quiz App</div>
       {/* Render your form inputs here */}
       <button
         onClick={() => {

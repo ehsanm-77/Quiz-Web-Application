@@ -6,8 +6,8 @@ export default function SetupPage() {
   const { formState, formDispatch } = useFormContext();
   const [setup, setSetup] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [catagory, setCatagory] = useState('');
-  const [dificulty, setDificulty] = useState('');
+  const [category, setCategory] = useState('');
+  const [difficulty, setDifficulty] = useState('');
   const [number, setNumber] = useState('');
   const [isValidNumber, setIsValidNumber] = useState(true);
   const [numberErrorMessage, setNumberErrorMessage] = useState('');
@@ -39,16 +39,16 @@ export default function SetupPage() {
   };
 
   const handleCategory = (e) => {
-    setCatagory(e.target.value);
+    setCategory(e.target.value);
   };
 
-  const handleDificulty = (e) => {
-    setDificulty(e.target.value);
+  const handleDifficulty = (e) => {
+    setDifficulty(e.target.value);
   };
 
   const handleData = () => {
     setIsLoading(true);
-    fetchQuizData(number, `&category=${catagory}`, `&difficulty=${dificulty}`)
+    fetchQuizData(number, `&category=${category}`, `&difficulty=${difficulty}`)
       .then((data) => {
         formDispatch({ type: 'SET_QUIZ_DATA', payload: data });
         console.log(data);
@@ -109,7 +109,7 @@ export default function SetupPage() {
               className="p-2 rounded-md bg-yellow-300 focus:outline-none text-black"
               name=""
               id=""
-              onChange={handleDificulty}
+              onChange={handleDifficulty}
             >
               <option value="">Any</option>
               <option value="easy">Easy</option>

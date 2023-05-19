@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useFormContext } from '../../utils/FormContext/FormContext';
 
 export const ResultPage = () => {
@@ -11,6 +11,7 @@ export const ResultPage = () => {
     formState.currentQuestionIndex = 0;
     formDispatch({ type: 'CHANGE_PAGE', payload: { page: 0 } });
   };
+
   const handleAgainAnimation = () => {
     setAnimate(true);
   };
